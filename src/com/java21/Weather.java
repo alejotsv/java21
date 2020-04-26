@@ -5,7 +5,11 @@ public class Weather {
         float fahrenheit = 86;
         showCelsius(fahrenheit);
 
+        float celsius = 33;
+        showFahrenheit(celsius);
 
+        showFahrenheit(12);
+        showCelsius(84);
 
     }
 
