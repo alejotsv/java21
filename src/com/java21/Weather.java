@@ -5,6 +5,8 @@ public class Weather {
         float fahrenheit = 86;
         showCelsius(fahrenheit);
 
+
+
     }
 
 
@@ -19,7 +21,16 @@ public class Weather {
         System.out.println(fahrenheit + " degrees Fahrenheit is " + celsius + " degrees Celsius.");
     }
 
+    static float convertToFahrenheit(float celsius){
+        float fahrenheit;
+        fahrenheit = (celsius*9/5) + 32;
+        return fahrenheit;
+    }
 
+    static void showFahrenheit(float celsius){
+        float fahrenheit = convertToFahrenheit(celsius);
+        System.out.println(celsius + " degrees Celsius is " + fahrenheit + " degrees Fahrenheit.");
+    }
 
 
 
