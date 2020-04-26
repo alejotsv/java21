@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="446ee7a7-84d9-497d-8ad0-5e464ae9497a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MarsRobot.java" afterDir="false" />
+    <list default="true" id="446ee7a7-84d9-497d-8ad0-5e464ae9497a" name="Default Changelist" comment="Create Mars Robot class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MarsRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MarsRobot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,16 +42,43 @@
       <option name="presentableId" value="Default" />
       <updated>1587871197146</updated>
     </task>
+    <task id="LOCAL-00001" summary="Crate Mars Robot class">
+      <created>1587871495528</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587871495528</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Crate Mars Robot class">
+      <created>1587871542118</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587871542118</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Create Mars Robot class">
+      <created>1587871565394</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587871565394</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Crate Mars Robot class" />
+    <MESSAGE value="Create Mars Robot class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Mars Robot class" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="4124" y="116" key="CommitChangelistDialog2" timestamp="1587871541896">
+    <state x="4124" y="116" key="CommitChangelistDialog2" timestamp="1587871578512">
       <screen x="3520" y="0" width="1920" height="1080" />
     </state>
-    <state x="4124" y="116" key="CommitChangelistDialog2/65.24.1535.876/3520.0.1920.1080/1600.0.1920.1080@3520.0.1920.1080" timestamp="1587871541896" />
-    <state x="4112" y="275" key="Vcs.Push.Dialog.v2" timestamp="1587871551640">
+    <state x="4124" y="116" key="CommitChangelistDialog2/65.24.1535.876/3520.0.1920.1080/1600.0.1920.1080@3520.0.1920.1080" timestamp="1587871578512" />
+    <state x="4112" y="275" key="Vcs.Push.Dialog.v2" timestamp="1587871621653">
       <screen x="3520" y="0" width="1920" height="1080" />
     </state>
-    <state x="4112" y="275" key="Vcs.Push.Dialog.v2/65.24.1535.876/3520.0.1920.1080/1600.0.1920.1080@3520.0.1920.1080" timestamp="1587871551640" />
+    <state x="4112" y="275" key="Vcs.Push.Dialog.v2/65.24.1535.876/3520.0.1920.1080/1600.0.1920.1080@3520.0.1920.1080" timestamp="1587871621653" />
   </component>
 </project>
