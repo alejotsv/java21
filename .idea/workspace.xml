@@ -70,23 +70,31 @@
       <option name="project" value="LOCAL" />
       <updated>1587871645300</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create checkTemperature method">
+      <created>1587871774427</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587871774427</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Crate Mars Robot class" />
     <MESSAGE value="Create Mars Robot class" />
     <MESSAGE value="Add attributes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add attributes" />
+    <MESSAGE value="Create checkTemperature method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create checkTemperature method" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="4124" y="116" key="CommitChangelistDialog2" timestamp="1587871645037">
+    <state x="4124" y="116" key="CommitChangelistDialog2" timestamp="1587871774219">
       <screen x="3520" y="0" width="1920" height="1080" />
     </state>
-    <state x="4124" y="116" key="CommitChangelistDialog2/65.24.1535.876/3520.0.1920.1080/1600.0.1920.1080@3520.0.1920.1080" timestamp="1587871645037" />
-    <state x="4112" y="275" key="Vcs.Push.Dialog.v2" timestamp="1587871652158">
+    <state x="4124" y="116" key="CommitChangelistDialog2/65.24.1535.876/3520.0.1920.1080/1600.0.1920.1080@3520.0.1920.1080" timestamp="1587871774219" />
+    <state x="4112" y="275" key="Vcs.Push.Dialog.v2" timestamp="1587871777638">
       <screen x="3520" y="0" width="1920" height="1080" />
     </state>
-    <state x="4112" y="275" key="Vcs.Push.Dialog.v2/65.24.1535.876/3520.0.1920.1080/1600.0.1920.1080@3520.0.1920.1080" timestamp="1587871652158" />
+    <state x="4112" y="275" key="Vcs.Push.Dialog.v2/65.24.1535.876/3520.0.1920.1080/1600.0.1920.1080@3520.0.1920.1080" timestamp="1587871777638" />
   </component>
 </project>
