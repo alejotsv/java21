@@ -15,5 +15,11 @@ class MarsApplication {
             System.out.println("---------------------------");
             }
 
+        MarsRobot opportunity = new MarsRobot();
+        opportunity.setTemperature(-15);
+        opportunity.setSpeed(10);
+        opportunity.setStatus("Running");
+        opportunity.showAttributes();
+
     }
 }
