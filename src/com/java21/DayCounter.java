@@ -3,11 +3,13 @@ package com.java21;
 public class DayCounter {
     public static void main(String[] args){
         System.out.println("counting days...");
-        Object[][] thisYear = populateMonths(1984);
-        System.out.println(thisYear[0][22]);
+        DayCounter myYear = new DayCounter();
+        boolean leapYear = myYear.isLeap(2020);
+        System.out.println(leapYear);
+
     }
 
-    public static boolean isLeap(int year){
+    public boolean isLeap(int year){
         boolean leap = false;
         if (year%4 == 0){
             if (year%100 == 0 && year%400 != 0){
@@ -19,10 +21,7 @@ public class DayCounter {
         return leap;
     }
 
-    public static Object[][] populateMonths(int year){
-        boolean leap = isLeap(year);
-        Object[][] populatedYear = new Object[12][31];
-        return populatedYear;
-    }
 
 }
+
+
