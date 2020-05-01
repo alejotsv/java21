@@ -8,12 +8,8 @@ public class DayCounter {
     static int START_YEAR = 2020;
 
     public static void main(String[] args){
-        System.out.println("counting days...");
         DayCounter myYear = new DayCounter();
-        int dayOfJan = myYear.firstDay(1968);
-        System.out.println(dayOfJan);
-        int thisDay = myYear.valueOfDate("April", 30, 2020);
-        System.out.println(thisDay);
+        myYear.getDay("September", 13, 2020);
 
 
 
@@ -135,6 +131,46 @@ public class DayCounter {
             valueOfMonth++;
         }
         return valueOfMonth + day;
+    }
+
+//    Calculate what day of the week is any given date
+    public String dayOfTheWeek(String month, int day, int year){
+        String theDay = "day";
+        int firstDay = firstDay(year);
+        int valueOfDate = valueOfDate(month, day, year);
+        int thisDay = (firstDay + valueOfDate - 1)%7;
+
+        switch(thisDay){
+            case 1:
+                theDay = "Monday";
+                break;
+            case 2:
+                theDay = "Tuesday";
+                break;
+            case 3:
+                theDay = "Wednesday";
+                break;
+            case 4:
+                theDay = "Thursday";
+                break;
+            case 5:
+                theDay = "Friday";
+                break;
+            case 6:
+                theDay = "Saturday";
+                break;
+            case 0:
+                theDay = "Sunday";
+                break;
+        }
+
+        return theDay;
+
+    }
+
+//    Print day of the week for any given date
+    public void getDay(String month, int day, int year){
+        System.out.println("Day of the week for " + month + " " + day + ", " + year + ":\n" + dayOfTheWeek(month, day, year));
     }
 
 }
