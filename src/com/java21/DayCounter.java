@@ -10,12 +10,10 @@ public class DayCounter {
     public static void main(String[] args){
         System.out.println("counting days...");
         DayCounter myYear = new DayCounter();
-        boolean leapYear = myYear.isLeap(2020);
-        System.out.println(leapYear);
-
-        int itChanged = myYear.dayChange(1996);
-        System.out.println(itChanged);
-
+        int dayOfJan = myYear.firstDay(1968);
+        System.out.println(dayOfJan);
+        int thisDay = myYear.valueOfDate("April", 30, 2020);
+        System.out.println(thisDay);
 
 
 
@@ -90,6 +88,53 @@ public class DayCounter {
                 break;
         }
         return dayNumber;
+    }
+
+//    Calculate the number of days from January 1st until the selected day
+    public int valueOfDate(String month, int day, int year){
+        int valueOfMonth = 0;
+        switch(month){
+            case "January":
+                valueOfMonth = 0;
+                break;
+            case "February":
+                valueOfMonth = 31;
+                break;
+            case "March":
+                valueOfMonth = 59;
+                break;
+            case "April":
+                valueOfMonth = 90;
+                break;
+            case "May":
+                valueOfMonth = 120;
+                break;
+            case "June":
+                valueOfMonth = 151;
+                break;
+            case "July":
+                valueOfMonth = 181;
+                break;
+            case "August":
+                valueOfMonth = 212;
+                break;
+            case "September":
+                valueOfMonth = 243;
+                break;
+            case "October":
+                valueOfMonth = 273;
+                break;
+            case "November":
+                valueOfMonth = 304;
+                break;
+            case "December":
+                valueOfMonth = 334;
+                break;
+        }
+        if (isLeap(year)){
+            valueOfMonth++;
+        }
+        return valueOfMonth + day;
     }
 
 }
