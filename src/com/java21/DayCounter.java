@@ -18,7 +18,7 @@ public class DayCounter {
 
 
     }
-
+//  Determines if a year is leap or not
     public boolean isLeap(int year){
         boolean leap = false;
         if (year%4 == 0){
@@ -31,6 +31,7 @@ public class DayCounter {
         return leap;
     }
 
+//    Calculates how many days apart is January 1st of the selected year in comparison to the START_DATE
     public int dayChange(int year){
         int dayChanger = 0;
         if (year > START_YEAR){
