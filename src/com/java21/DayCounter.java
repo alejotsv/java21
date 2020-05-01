@@ -13,7 +13,9 @@ public class DayCounter {
         boolean leapYear = myYear.isLeap(2020);
         System.out.println(leapYear);
 
-        System.out.println(myYear.dayChange(2019));
+        int itChanged = myYear.dayChange(1996);
+        System.out.println(itChanged);
+
 
 
 
@@ -35,6 +37,7 @@ public class DayCounter {
     public int dayChange(int year){
         int dayChanger = 0;
         if (year > START_YEAR){
+            dayChanger++;
             for (int i = year; i > START_YEAR; i--){
                 if(isLeap(i)){
                     dayChanger += 2;
@@ -51,9 +54,43 @@ public class DayCounter {
                 }
             }
         }
-        return dayChanger%7;
+        return (dayChanger%7);
     }
 
+//    Calculate day of January 1st of selected year
+    public int firstDay(int year){
+        int dayNumber = 0;
+        switch(dayChange(year)){
+            case 0:
+                dayNumber = 3;
+                break;
+            case -1:
+            case 6:
+                dayNumber = 2;
+                break;
+            case -2:
+            case 5:
+                dayNumber = 1;
+                break;
+            case -3:
+            case 4:
+                dayNumber = 7;
+                break;
+            case -4:
+            case 3:
+                dayNumber = 6;
+                break;
+            case -5:
+            case 2:
+                dayNumber = 5;
+                break;
+            case -6:
+            case 1:
+                dayNumber = 4;
+                break;
+        }
+        return dayNumber;
+    }
 
 }
 
