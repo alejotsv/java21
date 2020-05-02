@@ -15,7 +15,11 @@ public class GiftShop {
             System.out.println("\nItem ID: " + show.getId());
             System.out.println("Name: " + show.getName());
             System.out.println("Retail price: $" + show.getRetail());
-            System.out.println("Price: $" + show.getPrice());
+            if (show.getNoDiscount()){
+                System.out.println("No discount here");
+            } else {
+                System.out.println("Price: $" + show.getPrice());
+            }
             System.out.println("Quantity: " + show.getQuantity());
         }
     }
