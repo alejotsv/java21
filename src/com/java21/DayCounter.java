@@ -4,8 +4,8 @@ import java.sql.Date;
 
 public class DayCounter {
 //    Start day: January 1st, 2020 = Wednesday
-    static int START_DAY = 3;
-    static int START_YEAR = 2020;
+    static final int START_DAY = 3;
+    static final int START_YEAR = 2020;
 
     public static void main(String[] args){
         DayCounter myYear = new DayCounter();
@@ -13,7 +13,6 @@ public class DayCounter {
         System.out.println("From class\nStart day = " + DayCounter.START_DAY);
         System.out.println("From instance myYear\nStart day = " + myYear.START_DAY);
         DayCounter testYear = new DayCounter();
-        testYear.START_DAY = 5;
 
 
     }
