@@ -14,8 +14,7 @@ public class DayCounter {
         System.out.println("From instance myYear\nStart day = " + myYear.START_DAY);
         DayCounter testYear = new DayCounter();
         testYear.START_DAY = 5;
-        System.out.println("From class\nStart day = " + DayCounter.START_DAY);
-        System.out.println("From instance myYear\nStart day = " + myYear.START_DAY);
+
 
     }
 //  Determines if a year is leap or not
