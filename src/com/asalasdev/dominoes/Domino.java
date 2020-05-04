@@ -9,20 +9,13 @@ public class Domino {
         this.bottom = y;
     }
 
-//    Getters and setters
+//    Getters
     public int getTop() {
         return top;
     }
 
-    public void setTop(int top) {
-        this.top = top;
-    }
-
-    public int getBottom() {
+     public int getBottom() {
         return bottom;
     }
 
-    public void setBottom(int bottom) {
-        this.bottom = bottom;
-    }
 }

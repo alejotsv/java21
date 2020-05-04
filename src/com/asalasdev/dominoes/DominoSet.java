@@ -6,36 +6,37 @@ public class DominoSet {
     int maxValue;
     int numOfPieces;
 
-//  Getters and Setters
-    public String getVariant() {
-        return variant;
+    public DominoSet(String variant){
+        this.variant = variant;
+        if (variant == "Venezuelan"){
+            this.maxValue = 6;
+            this.numOfPieces = 28;
+        } else if (variant == "Cuban"){
+            this.maxValue = 9;
+            this.numOfPieces = 55;
+        }
+
     }
 
-    public void setVariant(String variant) {
-        this.variant = variant;
+    Domino[] createSet(int maxValue, int numOfPieces) {
+        Domino[] dominoSet = new Domino[numOfPieces];
+    }
+
+//  Getters
+    public String getVariant() {
+        return variant;
     }
 
     public Domino[] getDominoSet() {
         return dominoSet;
     }
 
-    public void setDominoSet(Domino[] dominoSet) {
-        this.dominoSet = dominoSet;
-    }
-
-    public int getMaxValue() {
+     public int getMaxValue() {
         return maxValue;
-    }
-
-    public void setMaxValue(int maxValue) {
-        this.maxValue = maxValue;
     }
 
     public int getNumOfPieces() {
         return numOfPieces;
     }
 
-    public void setNumOfPieces(int numOfPieces) {
-        this.numOfPieces = numOfPieces;
-    }
 }
