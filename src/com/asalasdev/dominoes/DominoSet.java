@@ -6,10 +6,6 @@ public class DominoSet {
     int maxValue;
     int numOfPieces;
 
-    public static void main(String[] args){
-        createSet(9, 55);
-    }
-
     public DominoSet(String variant){
         this.variant = variant;
         if (variant == "Venezuelan"){
@@ -19,6 +15,7 @@ public class DominoSet {
             this.maxValue = 9;
             this.numOfPieces = 55;
         }
+        this.dominoSet = createSet(this.maxValue, this.numOfPieces);
 
     }
 
@@ -27,7 +24,6 @@ public class DominoSet {
         for (int i=0; i<=maxValue; i++){
             for (int j=0; j<=maxValue; j++){
                 Domino domino = new Domino(i,j);
-                System.out.println("Pieza: " + domino.top + "|" + domino.bottom);
             }
         }
 
