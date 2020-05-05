@@ -3,9 +3,11 @@ package com.asalasdev.dominoes;
 public class Main {
 
     public static void main(String[] args){
-        String variant;
+        String variant = "Venezuelan";
+        String[] players = {"Alejandro", "Juan", "Arcadio", "Oscar"};
         System.out.println("Creating a new game");
-//        variant = "Cuban";
+
+        Game newGame = new Game(players, variant);
 
 
     }

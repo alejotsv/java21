@@ -1,17 +1,22 @@
 package com.asalasdev.dominoes;
 
 public class Game {
+    String[] players;
+    DominoSet gameSet;
 
-    public DominoSet createSet(String variant){
-        DominoSet newSet = null;
+    public Game(String[] players, String variant) {
+        this.players = players;
+        createSet(variant);
+    }
+
+    void createSet(String variant){
         if (variant.equals("Venezuelan")){
-            newSet = new DominoSetVenezuelan();
+            this.gameSet = new DominoSetVenezuelan();
         } else if (variant.equals("Cuban")){
-            newSet = new DominoSetCuban();
+            gameSet = new DominoSetCuban();
         } else {
             System.out.println("The variant " + variant + " is not supported.");
         }
-        return newSet;
     }
 
 }
