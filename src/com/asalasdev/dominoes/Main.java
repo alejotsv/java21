@@ -1,11 +1,11 @@
 package com.asalasdev.dominoes;
 
-public class Game {
+public class Main {
 
     public static void main(String[] args){
         String variant;
         System.out.println("Creating a new game");
-        variant = "Venezuelan";
+        variant = "Cuban";
         if (variant.equals("Venezuelan")){
             DominoSetVenezuelan newGame = new DominoSetVenezuelan();
         } else if (variant.equals("Cuban")){
