@@ -1,6 +1,9 @@
 package com.asalasdev.dominoes;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Game {
     String[] players;
@@ -25,8 +28,11 @@ public class Game {
         }
     }
 
+//    Shuffle set and save in ArrayList to remove pieces as needed
     void shuffleSet(Domino[] dominoes){
-
+        this.shuffledSet = new ArrayList<>(Arrays.asList(dominoes));
+        Collections.shuffle(shuffledSet);
+        System.out.println("Shuffled");
     }
 
 
