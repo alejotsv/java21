@@ -3,7 +3,7 @@ package com.asalasdev.dominoes;
 public class Main {
 
     public static void main(String[] args){
-        String variant = "Venezuelan";
+        String variant = "Cuban";
         String[] players = {"Alejandro", "Juan", "Arcadio", "Oscar"};
         System.out.println("Creating a new game");
 

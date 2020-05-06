@@ -9,16 +9,15 @@ public class DominoSet {
 
     static Domino[] createSet(int maxValue, int numOfPieces) {
         Domino[] dominoSet = new Domino[numOfPieces];
-        int pieza = 1;
+        int arrPosition = 0;
         int counter = 0;
         for (int i=counter; i<=maxValue; i++){
             for (int j=counter; j<=maxValue; j++){
                 Domino domino = new Domino(i,j);
-                System.out.println("Pieza " + pieza + ": " + domino.top + "|" + domino.bottom);
-                pieza ++;
+                dominoSet[arrPosition] = domino;
+                arrPosition++;
             }
-            counter++;
-//            TODO: fix repeated dominoes and add to Domino array
+            counter++;//
         }
 
         return dominoSet;
