@@ -9,7 +9,8 @@ public class Main {
 
         Game newGame = new Game(players, variant);
 
-
+        int thisDominoTop = newGame.gameSet.dominoSet[6].bottom;
+        System.out.println(thisDominoTop);
     }
 
 }
