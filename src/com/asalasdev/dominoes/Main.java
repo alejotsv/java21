@@ -21,6 +21,12 @@ public class Main {
             System.out.println(dom.top + " | " + dom.bottom);
         }
 
+        ArrayList<Player> thesePlayers = newGame.players;
+
+        for (Player player : thesePlayers){
+            System.out.println(player.name);
+        }
+
     }
 
 }
