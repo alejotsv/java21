@@ -14,6 +14,8 @@ public class Player {
     }
 
     void grabPieces(ArrayList<Domino> shuffledSet, int pos){
-
+        for (int i=pos; i<pos+7; i++){
+            this.dominoSet.add(shuffledSet.get(i));
+        }
     }
 }
