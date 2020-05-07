@@ -22,19 +22,19 @@ public class Main {
         }
 
         ArrayList<Player> thesePlayers = newGame.players;
-        Player first = thesePlayers.get(0);
-        first.grabPieces(shuffled,first.position);
+
+        newGame.distributeDominoes(thesePlayers, shuffled);
 
         for (Player player : thesePlayers){
             System.out.println("Player " + player.position + ": " + player.name);
-            System.out.println(player.name + "'s pieces left: " + player.dominoSet.size());
+            ArrayList<Domino> tempSet = player.dominoSet;
+            for(Domino piece : tempSet){
+                System.out.println(piece.top + " | " + piece.bottom);
+            }
+            System.out.println("-----------------------");
         }
 
-        ArrayList<Domino> alejoSet = first.dominoSet;
 
-        for (Domino domino : alejoSet){
-            System.out.println(domino.top + " | " + domino.bottom);
-        }
 
     }
 

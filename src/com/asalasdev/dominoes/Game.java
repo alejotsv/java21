@@ -33,7 +33,7 @@ public class Game {
     void shuffleSet(Domino[] dominoes){
         this.shuffledSet = new ArrayList<>(Arrays.asList(dominoes));
         Collections.shuffle(shuffledSet);
-        System.out.println("Shuffled");
+        System.out.println("Shuffled set");
     }
 
 //    Create ArrayList of Player objects from Array of players' names
@@ -43,6 +43,14 @@ public class Game {
             tempArr[i] = new Player(players[i], i);
         }
         return new ArrayList<>(Arrays.asList(tempArr));
+    }
+
+    void distributeDominoes(ArrayList<Player> players, ArrayList<Domino> set){
+        int i = 0;
+        for(Player player : players){
+            player.grabPieces(set, player.position + i);
+            i += 6;
+        }
     }
 
 }
