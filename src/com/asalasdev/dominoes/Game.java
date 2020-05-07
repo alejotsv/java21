@@ -3,16 +3,17 @@ package com.asalasdev.dominoes;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 
 public class Game {
-    String[] players;
+    ArrayList<Player> players;
     DominoSet gameSet;
     ArrayList<Domino> shuffledSet;
 
     public Game(String[] players, String variant) {
-        this.players = players;
         createSet(variant);
+        this.players = addPlayers(players);
     }
 
 //    Create dominoes set depending on variant
@@ -33,6 +34,15 @@ public class Game {
         this.shuffledSet = new ArrayList<>(Arrays.asList(dominoes));
         Collections.shuffle(shuffledSet);
         System.out.println("Shuffled");
+    }
+
+//    Create ArrayList of Player objects from Array of players' names
+    ArrayList<Player> addPlayers(String[] players){
+        Player[] tempArr = new Player[players.length];
+        for (int i=0; i<players.length; i++){
+            tempArr[i] = new Player(players[i]);
+        }
+        return new ArrayList<>(Arrays.asList(tempArr));
     }
 
 }
