@@ -24,8 +24,10 @@ public class Main {
         ArrayList<Player> thesePlayers = newGame.players;
 
         for (Player player : thesePlayers){
-            System.out.println(player.name);
+            System.out.println("Player " + player.position + ": " + player.name);
+            System.out.println(player.name + "'s pieces left: " + player.dominoSet.size());
         }
+
 
     }
 

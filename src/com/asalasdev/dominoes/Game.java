@@ -40,7 +40,7 @@ public class Game {
     ArrayList<Player> addPlayers(String[] players){
         Player[] tempArr = new Player[players.length];
         for (int i=0; i<players.length; i++){
-            tempArr[i] = new Player(players[i]);
+            tempArr[i] = new Player(players[i], i);
         }
         return new ArrayList<>(Arrays.asList(tempArr));
     }
