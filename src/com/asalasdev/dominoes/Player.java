@@ -6,6 +6,7 @@ public class Player {
     String name;
     ArrayList<Domino> dominoSet;
     int position;
+    boolean canPlay;
 
     public Player(String player, int position){
         this.name = player;

@@ -6,13 +6,15 @@ import java.util.Collections;
 
 public class Game {
     ArrayList<Player> players;
-    DominoSet gameSet;
     ArrayList<Domino> shuffledSet;
+    ArrayList<Domino> currentHand;
+    DominoSet gameSet;
     boolean isOver = false;
 
     public Game(String[] players, String variant) {
         createSet(variant);
         this.players = addPlayers(players);
+        this.currentHand = new ArrayList<Domino>();
     }
 
 //    Create dominoes set depending on variant
