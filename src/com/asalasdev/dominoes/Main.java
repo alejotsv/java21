@@ -34,6 +34,21 @@ public class Main {
             System.out.println("-----------------------");
         }
 
+        Player player1 = thesePlayers.get(0);
+        System.out.println(player1.name);
+
+        Domino playedDomino = player1.playDomino(0);
+        System.out.println("Domino played: " + playedDomino.top + " | " + playedDomino.bottom);
+
+        for (Player player : thesePlayers){
+            System.out.println("Player " + player.position + ": " + player.name);
+            ArrayList<Domino> tempSet = player.dominoSet;
+            for(Domino piece : tempSet){
+                System.out.println(piece.top + " | " + piece.bottom);
+            }
+            System.out.println("-----------------------");
+        }
+
 
 
     }

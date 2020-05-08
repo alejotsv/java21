@@ -19,4 +19,8 @@ public class Player {
             this.dominoSet.add(shuffledSet.get(i));
         }
     }
+
+    Domino playDomino(int index){
+        return this.dominoSet.remove(index);
+    }
 }
