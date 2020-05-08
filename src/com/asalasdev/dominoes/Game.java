@@ -1,15 +1,14 @@
 package com.asalasdev.dominoes;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 
 public class Game {
     ArrayList<Player> players;
     DominoSet gameSet;
     ArrayList<Domino> shuffledSet;
+    boolean isOver = false;
 
     public Game(String[] players, String variant) {
         createSet(variant);
