@@ -15,16 +15,40 @@ public class SwingExample extends JFrame {
         setSize(600, 600);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        String[] buttons = {"Load", "Save", "Subscribe", "Unsubscribe"};
+        JPanel pane = AddButtons(buttons);
+        add(pane);
+        pack();
+    }
+
+    ArrayList<String> getLAF() {
         ArrayList<String> allLooks = new ArrayList<String>();
         UIManager.LookAndFeelInfo[] looks = UIManager.getInstalledLookAndFeels();
-        for (UIManager.LookAndFeelInfo look : looks){
+        for (UIManager.LookAndFeelInfo look : looks) {
             System.out.println(look.getClassName());
             allLooks.add(look.getClassName());
         }
+        return allLooks;
+    }
+
+    void setLAF(String look) {
         try {
-        UIManager.setLookAndFeel(allLooks.get(2));
+            UIManager.setLookAndFeel(look);
         } catch(Exception e){
             System.out.println(e.getMessage());
         }
     }
+
+    JPanel AddButtons(String[] buttonText){
+        JPanel pane = new JPanel();
+        ArrayList<String> temp = new ArrayList<>(Arrays.asList(buttonText));
+        String icon;
+        for (String text : temp){
+            icon = text + ".gif";
+            pane.add(new JButton(text, new ImageIcon(icon)));
+        }
+        return pane;
+    }
+
+
 }
