@@ -11,5 +11,6 @@ public class SwingExample extends JFrame {
         super("Swing Example");
         setSize(600, 600);
         setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
