@@ -15,7 +15,7 @@ public class SwingExample extends JFrame {
         setSize(600, 600);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        String[] buttons = {"Load", "Save", "Subscribe", "Unsubscribe"};
+        String[] buttons = {"Upload", "Save", "Subscribe", "Unsubscribe"};
         JPanel pane = AddButtons(buttons);
         add(pane);
         pack();
@@ -42,10 +42,11 @@ public class SwingExample extends JFrame {
     JPanel AddButtons(String[] buttonText){
         JPanel pane = new JPanel();
         ArrayList<String> temp = new ArrayList<>(Arrays.asList(buttonText));
-        String icon;
+        String iconName;
         for (String text : temp){
-            icon = text + ".gif";
-            pane.add(new JButton(text, new ImageIcon(icon)));
+            iconName = "./img/" + text.toLowerCase() + ".png";
+            ImageIcon icon = new ImageIcon(getClass().getResource(iconName));
+            pane.add(new JButton(text,icon));
         }
         return pane;
     }
