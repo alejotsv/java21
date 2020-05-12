@@ -14,12 +14,12 @@ public class SwingExample extends JFrame {
         super("Swing Example");
         setSize(600, 600);
         setLocationRelativeTo(null);
-        setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         String[] buttons = {"Upload", "Save", "Subscribe", "Unsubscribe"};
         JPanel pane = addButtons(buttons);
+        addTextField("This is my text field", pane);
         add(pane);
-        pack();
+        setVisible(true);
     }
 
     ArrayList<String> getLAF() {
@@ -52,8 +52,10 @@ public class SwingExample extends JFrame {
         return pane;
     }
 
-    void addTextField(String text, int dim, JPanel panel){
-        panel.add(new JTextField(text, dim));
+    void addTextField(String text, JPanel panel){
+        JTextField textField = new JTextField(text);
+        textField.setEditable(false);
+        panel.add(textField);
     }
 
 
