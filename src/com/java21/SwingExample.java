@@ -52,7 +52,9 @@ public class SwingExample extends JFrame {
         return pane;
     }
 
-    JTextField
+    void addTextField(String text, int dim, JPanel panel){
+        panel.add(new JTextField(text, dim));
+    }
 
 
 }
