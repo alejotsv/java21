@@ -17,7 +17,7 @@ public class SwingExample extends JFrame {
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         String[] buttons = {"Upload", "Save", "Subscribe", "Unsubscribe"};
-        JPanel pane = AddButtons(buttons);
+        JPanel pane = addButtons(buttons);
         add(pane);
         pack();
     }
@@ -40,7 +40,7 @@ public class SwingExample extends JFrame {
         }
     }
 
-    JPanel AddButtons(String[] buttonText){
+    JPanel addButtons(String[] buttonText){
         JPanel pane = new JPanel();
         ArrayList<String> temp = new ArrayList<>(Arrays.asList(buttonText));
         String iconName;
@@ -51,6 +51,8 @@ public class SwingExample extends JFrame {
         }
         return pane;
     }
+
+    JTextField
 
 
 }
