@@ -13,6 +13,7 @@ public class SwingExample extends JFrame {
     public SwingExample() {
         super("Swing Example");
         setSize(600, 600);
+        setLocationRelativeTo(null);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         String[] buttons = {"Upload", "Save", "Subscribe", "Unsubscribe"};
