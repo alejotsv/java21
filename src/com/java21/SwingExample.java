@@ -1,6 +1,7 @@
 package com.java21;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -18,6 +19,13 @@ public class SwingExample extends JFrame {
         String[] buttons = {"Upload", "Save", "Subscribe", "Unsubscribe"};
         JPanel pane = addButtons(buttons);
         addTextField("This is my text field", pane);
+        JTextArea newArea = new JTextArea(6, 28);
+        newArea.setLineWrap(true);
+        newArea.setWrapStyleWord(true);
+        JScrollPane scroll = new JScrollPane(newArea,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        pane.add(scroll);
         add(pane);
         setVisible(true);
     }
