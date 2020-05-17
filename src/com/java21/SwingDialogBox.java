@@ -12,7 +12,7 @@ public class SwingDialogBox extends JFrame {
     }
 
     public SwingDialogBox(int x, int y, int monitor){
-        super("Pet Box");
+        super("My Pets");
         setSize(x, y);
         setPosition(x, y, monitor);
         setVisible(true);
