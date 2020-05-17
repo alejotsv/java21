@@ -18,10 +18,13 @@ public class SwingDialogBox extends JFrame {
         setVisible(true);
 //        int response = addConfirmDialog();
         String petName = myPetName();
-        System.out.println(petName);
         String petType = addOptionDialogBox();
-        System.out.println(petType);
         thankYouMessage(petName);
+        JButton yourPet = addAnimalButton(petName,petType);
+        JPanel petPanel = new JPanel();
+        petPanel.add(yourPet);
+        add(petPanel);
+        setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
@@ -57,7 +60,7 @@ public class SwingDialogBox extends JFrame {
 
     JButton addAnimalButton(String petName, String petType){
         String iconName = "./img/" + petType.toLowerCase() + ".png";
-        ImageIcon icon = new ImageIcon(getClass().getResource(iconName))
+        ImageIcon icon = new ImageIcon(getClass().getResource(iconName));
         return new JButton(petName, icon);
     }
 
