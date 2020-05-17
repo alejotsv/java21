@@ -12,15 +12,16 @@ public class SwingDialogBox extends JFrame {
     }
 
     public SwingDialogBox(int x, int y, int monitor){
-        super("This is my new Dialog Box");
+        super("Pet Box");
         setSize(x, y);
         setPosition(x, y, monitor);
         setVisible(true);
 //        int response = addConfirmDialog();
-        String userName = getUserName();
-        System.out.println(userName);
+        String petName = myPetName();
+        System.out.println(petName);
         String petType = addOptionDialogBox();
         System.out.println(petType);
+        thankYouMessage(petName);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
@@ -38,8 +39,8 @@ public class SwingDialogBox extends JFrame {
         return JOptionPane.showConfirmDialog(this, "Do you want to do this?", "The title of my box", JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE);
     }
 
-    String getUserName(){
-        return JOptionPane.showInputDialog(this, "Name", "Input username", JOptionPane.QUESTION_MESSAGE);
+    String myPetName(){
+        return JOptionPane.showInputDialog(this, "Pet name", "Input pet name", JOptionPane.QUESTION_MESSAGE);
     }
 
     String addOptionDialogBox(){
@@ -47,6 +48,17 @@ public class SwingDialogBox extends JFrame {
         int randomOption = (int)(Math.random()*3);
         int petNum = JOptionPane.showOptionDialog(this, "Select your type of pet", "Your pet", 0, JOptionPane.QUESTION_MESSAGE, null, options, options[randomOption]);
         return options[petNum];
+    }
+
+    void thankYouMessage(String petName){
+        String message = "You have created your pet " + petName;
+        JOptionPane.showMessageDialog(this, message);
+    }
+
+    JButton addAnimalButton(String petName, String petType){
+        String iconName = "./img/" + petType.toLowerCase() + ".png";
+        ImageIcon icon = new ImageIcon(getClass().getResource(iconName))
+        return new JButton(petName, icon);
     }
 
 
