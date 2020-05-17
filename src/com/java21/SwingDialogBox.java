@@ -34,6 +34,10 @@ public class SwingDialogBox extends JFrame {
         return JOptionPane.showConfirmDialog(this, "Do you want to do this?", "The title of my box", JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE);
     }
 
+    String getUserName(){
+        return JOptionPane.showInputDialog(this, "Name", "Input username", JOptionPane.QUESTION_MESSAGE);
+    }
+
 
 
 }
