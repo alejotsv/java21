@@ -17,6 +17,8 @@ public class SwingDialogBox extends JFrame {
         setPosition(x, y, monitor);
         setVisible(true);
 //        int response = addConfirmDialog();
+        String userName = getUserName();
+        System.out.println(userName);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
@@ -38,6 +40,11 @@ public class SwingDialogBox extends JFrame {
         return JOptionPane.showInputDialog(this, "Name", "Input username", JOptionPane.QUESTION_MESSAGE);
     }
 
+    void addOptionDialogBox(){
+        String[] options = { "Creature", "Animal", "Mythological" };
+        int randomOption = (int)(Math.random()*3);
+        JOptionPane.showOptionDialog(this, "Select your type of pet", "Your pet", 0, JOptionPane.QUESTION_MESSAGE, null, options, options[randomOption]);
+    }
 
 
 }
