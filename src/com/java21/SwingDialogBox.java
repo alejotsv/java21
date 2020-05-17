@@ -61,7 +61,12 @@ public class SwingDialogBox extends JFrame {
     JButton addAnimalButton(String petName, String petType){
         String iconName = "./img/" + petType.toLowerCase() + ".png";
         ImageIcon icon = new ImageIcon(getClass().getResource(iconName));
-        return new JButton(petName, icon);
+        Image img = icon.getImage();
+        Image resizedImg = img.getScaledInstance(30, 30, Image.SCALE_SMOOTH);
+        ImageIcon resizedIcon = new ImageIcon(resizedImg);
+        JButton petButton = new JButton(petName, resizedIcon);
+        petButton.setSize(30, 30);
+        return petButton;
     }
 
 
