@@ -19,7 +19,7 @@ public class StackExample {
         popped(stack);
         popped(stack);
         popped(stack);
-
+        popped(stack);
     }
 
     static void showStack(Stack stack){
@@ -34,5 +34,10 @@ public class StackExample {
         System.out.println("This is what I just popped: " + ob);
         System.out.println("--------------------");
         showStack(stack);
+        if (stack.empty()){
+            System.out.println("This is empty");
+        } else {
+            System.out.println("Go on");
+        }
     }
 }
