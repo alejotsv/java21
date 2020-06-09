@@ -2,11 +2,10 @@ package com.java21;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 
 public class ComicBooks {
-    HashMap<String, Float> condition = new HashMap<String, Float>();
-    ArrayList<Comic> myComics = new ArrayList<Comic>();
+    HashMap<String, Float> condition = new HashMap<>();
+    ArrayList<Comic> myComics = new ArrayList<>();
 
     public ComicBooks() {
         setInitialCondition(this.condition);
@@ -52,8 +51,7 @@ public class ComicBooks {
     }
 
     public float setFinalPrice(String conditionIn, float basePriceIn){
-        float finalPrice = (Float)this.condition.get(conditionIn) * basePriceIn;
-        return finalPrice;
+        return this.condition.get(conditionIn) * basePriceIn;
     }
 
     public void printComics(){
