@@ -16,9 +16,8 @@ public class ComicBooks {
         System.out.println("This is my Comics class: ");
         Float[] priceChange = { 3F, 2F, 1.5F, 1F, 0.5F, 0.25F };
         ComicBooks comix = new ComicBooks();
-        System.out.println(comix.condition.get("near mint"));
         comix.setCondition(priceChange);
-        System.out.println(comix.condition.get("near mint"));
+
        
 
     }
@@ -42,6 +41,16 @@ public class ComicBooks {
     public float setFinalPrice(String conditionIn, float basePriceIn){
         float finalPrice = (Float)this.condition.get(conditionIn) * basePriceIn;
         return finalPrice;
+    }
+
+    public void printComics(ArrayList<Comic> comics){
+        for ( Comic comic : comics ){
+            System.out.println("Title: " + comic.getTitle());
+            System.out.println("Issue: " + comic.getIssue());
+            System.out.println("Condition: " + comic.getCondition());
+            System.out.println("Price: " + comic.getPrice());
+            System.out.println("-----------------------------------");
+        }
     }
 
     class Comic {
