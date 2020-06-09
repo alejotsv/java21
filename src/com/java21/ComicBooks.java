@@ -18,6 +18,19 @@ public class ComicBooks {
         ComicBooks comix = new ComicBooks();
         comix.setCondition(priceChange);
 
+        Comic spiderMan = new Comic("Amazing Spider-Man", "1A", 12000F, "very fine");
+        spiderMan.setPrice(comix.setFinalPrice(spiderMan.condition, spiderMan.basePrice));
+        comix.myComics.add(spiderMan);
+
+        Comic hulk = new Comic("Incredible Hulk", "181", 680F, "near mint");
+        hulk.setPrice(comix.setFinalPrice(hulk.condition, hulk.basePrice));
+        comix.myComics.add(hulk);
+
+        Comic cerebus = new Comic("Cerebus", "1A", 190F, "good");
+        cerebus.setPrice(comix.setFinalPrice(cerebus.condition, cerebus.basePrice));
+        comix.myComics.add(cerebus);
+
+        comix.printComics();
        
 
     }
@@ -43,17 +56,17 @@ public class ComicBooks {
         return finalPrice;
     }
 
-    public void printComics(ArrayList<Comic> comics){
-        for ( Comic comic : comics ){
+    public void printComics(){
+        for ( Comic comic : this.myComics ){
             System.out.println("Title: " + comic.getTitle());
             System.out.println("Issue: " + comic.getIssue());
             System.out.println("Condition: " + comic.getCondition());
-            System.out.println("Price: " + comic.getPrice());
+            System.out.println("Price: $" + comic.getPrice());
             System.out.println("-----------------------------------");
         }
     }
 
-    class Comic {
+    static class Comic {
         String title;
         String issue;
         String condition;
