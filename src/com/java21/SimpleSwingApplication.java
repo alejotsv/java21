@@ -5,12 +5,13 @@ import java.awt.*;
 public class SimpleSwingApplication extends JFrame {
     public static void main(String[] args) {
         System.out.println("This is my simple Swing application");
-        SimpleSwingApplication myApp = new SimpleSwingApplication("My App");
+        SimpleSwingApplication myApp = new SimpleSwingApplication("My App", 500, 500);
     }
 
-    public SimpleSwingApplication(String title){
+    public SimpleSwingApplication(String title, int x, int y){
         super(title);
-        setSize(300, 300);
+        Dimension dimension = new Dimension(x, y);
+        setSize(dimension);
         setVisible(true);
     }
 }
