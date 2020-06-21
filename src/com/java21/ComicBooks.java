@@ -52,6 +52,7 @@ public class ComicBooks {
 
     public float setFinalPrice(String conditionIn, float basePriceIn){
         return this.condition.get(conditionIn) * basePriceIn;
+
     }
 
     public void printComics(){

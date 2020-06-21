@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 public class SwingDialogBox extends JFrame {
 
     public static void main(String[] args) {
-        SwingDialogBox thisBox = new SwingDialogBox(600, 600, 2);
+        SwingDialogBox thisBox = new SwingDialogBox(600, 600, 0);
 
     }
 
