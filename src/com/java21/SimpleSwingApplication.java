@@ -13,6 +13,17 @@ public class SimpleSwingApplication extends JFrame {
         Dimension dimension = new Dimension(x, y);
         setSize(dimension);
         setVisible(true);
+        setLookAndFeel();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    private static void setLookAndFeel() {
+        String look = "com.sun.java.swing.plaf.gtk.GTKLookAndFeel";
+        try {
+            UIManager.setLookAndFeel(look);
+            System.out.println("Current look: " + look);
+        } catch (Exception e) {
+            System.out.println("Look and feel " + look + " not found");
+        }
     }
 }
