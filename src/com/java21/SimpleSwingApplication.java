@@ -13,5 +13,6 @@ public class SimpleSwingApplication extends JFrame {
         Dimension dimension = new Dimension(x, y);
         setSize(dimension);
         setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 }
