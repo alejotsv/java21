@@ -3,15 +3,15 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SimpleSwingApplication extends JFrame {
-    public static void main(String[] args) {
-        System.out.println("This is my simple Swing application");
-        SimpleSwingApplication myApp = new SimpleSwingApplication("My App", 500, 500);
-    }
+    JPanel pane = new JPanel();
+    JButton save = new JButton("Save");
 
     public SimpleSwingApplication(String title, int x, int y){
         super(title);
         Dimension dimension = new Dimension(x, y);
         setSize(dimension);
+        pane.add(save);
+        add(pane);
         setVisible(true);
         setLookAndFeel();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -25,5 +25,10 @@ public class SimpleSwingApplication extends JFrame {
         } catch (Exception e) {
             System.out.println("Look and feel " + look + " not found");
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("This is my simple Swing application");
+        SimpleSwingApplication myApp = new SimpleSwingApplication("My App", 500, 500);
     }
 }
