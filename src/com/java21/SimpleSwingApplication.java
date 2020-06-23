@@ -5,13 +5,16 @@ import java.awt.*;
 public class SimpleSwingApplication extends JFrame {
     JPanel pane = new JPanel();
     JButton save = new JButton("Save");
+    JButton cancel = new JButton("Cancel");
 
     public SimpleSwingApplication(String title, int x, int y){
         super(title);
         Dimension dimension = new Dimension(x, y);
         setSize(dimension);
         pane.add(save);
+        pane.add(cancel);
         add(pane);
+        pack();
         setVisible(true);
         setLookAndFeel();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
