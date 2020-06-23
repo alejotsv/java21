@@ -7,12 +7,11 @@ public class SimpleSwingApplication extends JFrame {
     JButton save = new JButton("Save");
     JButton cancel = new JButton("Cancel");
 
-    public SimpleSwingApplication(String title, int x, int y){
+    public SimpleSwingApplication(String title, int x, int y, String[] buttons){
         super(title);
         Dimension dimension = new Dimension(x, y);
         setSize(dimension);
-        pane.add(save);
-        pane.add(cancel);
+        setButtons(buttons);
         add(pane);
         pack();
         setVisible(true);
@@ -30,8 +29,16 @@ public class SimpleSwingApplication extends JFrame {
         }
     }
 
+    public void setButtons(String[] buttons){
+        for (String button : buttons){
+            JButton temp = new JButton(button);
+            pane.add(temp);
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("This is my simple Swing application");
-        SimpleSwingApplication myApp = new SimpleSwingApplication("My App", 500, 500);
+        String[] buttons = { "Save", "Yip", "Load"};
+        SimpleSwingApplication myApp = new SimpleSwingApplication("My App", 500, 500, buttons);
     }
 }
