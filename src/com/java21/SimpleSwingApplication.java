@@ -33,6 +33,7 @@ public class SimpleSwingApplication extends JFrame {
         ImageIcon img = new ImageIcon("./img/save.png");
         for (String button : buttons){
             JButton temp = new JButton(button, img);
+            temp.setSize(300, 300);
             pane.add(temp);
         }
     }
