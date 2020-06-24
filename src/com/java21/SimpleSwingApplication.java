@@ -13,7 +13,7 @@ public class SimpleSwingApplication extends JFrame {
         setSize(dimension);
         setButtons(buttons);
         add(pane);
-//        pack();
+        pack();
         setVisible(true);
         setLookAndFeel();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -30,10 +30,9 @@ public class SimpleSwingApplication extends JFrame {
     }
 
     public void setButtons(String[] buttons){
-        ImageIcon img = new ImageIcon("./img/save.png");
+        ImageIcon icon = new ImageIcon("/home/alejotsv/code/java/java21/global21/src/com/java21/img/save.png");
         for (String button : buttons){
-            JButton temp = new JButton(button, img);
-            temp.setSize(300, 300);
+            JButton temp = new JButton(button, icon);
             pane.add(temp);
         }
     }
