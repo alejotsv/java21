@@ -30,8 +30,10 @@ public class SimpleSwingApplication extends JFrame {
     }
 
     public void setButtons(String[] buttons){
-        ImageIcon icon = new ImageIcon("/home/alejotsv/code/java/java21/global21/src/com/java21/img/save.png");
+        String path  = "/home/alejotsv/code/java/java21/global21/src/com/java21/img/";
         for (String button : buttons){
+            String completePath = path + button.toLowerCase() + ".png";
+            ImageIcon icon = new ImageIcon(completePath);
             JButton temp = new JButton(button, icon);
             pane.add(temp);
         }
@@ -39,7 +41,7 @@ public class SimpleSwingApplication extends JFrame {
 
     public static void main(String[] args) {
         System.out.println("This is my simple Swing application");
-        String[] buttons = { "Save", "Load", "Cancel"};
+        String[] buttons = { "Save" };
         SimpleSwingApplication myApp = new SimpleSwingApplication("My App", 500, 500, buttons);
     }
 }
