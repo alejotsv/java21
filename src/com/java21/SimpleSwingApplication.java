@@ -41,7 +41,7 @@ public class SimpleSwingApplication extends JFrame {
 
     public static void main(String[] args) {
         System.out.println("This is my simple Swing application");
-        String[] buttons = { "Save" };
+        String[] buttons = { "Save", "Upload" };
         SimpleSwingApplication myApp = new SimpleSwingApplication("My App", 500, 500, buttons);
     }
 }
