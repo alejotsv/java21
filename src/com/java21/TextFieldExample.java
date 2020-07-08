@@ -22,7 +22,7 @@ public class TextFieldExample extends JFrame {
     ArrayList<JTextField> setFields(String[] arr){
         ArrayList<JTextField> textArr = new ArrayList<>();
         for(String element : arr){
-            JTextField temp = new JTextField(element, 25);
+            JTextField temp = new JTextField(element, 15);
             textArr.add(temp);
         }
         return textArr;
