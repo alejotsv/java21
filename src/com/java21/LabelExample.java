@@ -5,9 +5,9 @@ import java.awt.*;
 
 public class LabelExample extends JFrame{
     JPanel panel = new JPanel();
-    JLabel userLabel = new JLabel("User: ");
-    JLabel passwordLabel = new JLabel("Password: ");
-    JLabel urlLabel = new JLabel("URL: ");
+    JLabel userLabel = new JLabel("User: ", SwingConstants.RIGHT);
+    JLabel passwordLabel = new JLabel("Password: ", SwingConstants.LEFT);
+    JLabel urlLabel = new JLabel("URL: ", SwingConstants.LEFT);
 
     public LabelExample(String title, Dimension dimensions){
         super(title);
@@ -17,6 +17,7 @@ public class LabelExample extends JFrame{
         panel.add(passwordLabel);
         panel.add(urlLabel);
         setVisible(true);
+        pack();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }
@@ -25,5 +26,6 @@ public class LabelExample extends JFrame{
         System.out.println("This is my example for labels");
         Dimension dim = new Dimension(150, 150);
         LabelExample newLabel = new LabelExample("Labels", dim);
+        System.out.println(newLabel.userLabel.getText());
     }
 }
