@@ -29,7 +29,7 @@ public class TextFieldExample extends JFrame {
     }
 
     public static void main(String[] args){
-        String[] arr = { "Name", "Last Name", "Favorite Player"};
+        String[] arr = { "Name", "Last Name", "Favorite Team"};
         TextFieldExample field = new TextFieldExample(arr);
     }
 }
