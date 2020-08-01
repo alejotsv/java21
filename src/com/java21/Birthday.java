@@ -7,7 +7,7 @@ import static java.lang.Math.abs;
 
 public class Birthday {
     public static void main(String[] args){
-        ArrayList<String> birthdayDates = birthdaySlicer("09/19/81");
+        ArrayList<String> birthdayDates = birthdaySlicer("09/13/90");
         printBirthday(birthdayDates);
     }
 
