@@ -9,7 +9,7 @@ public class DayCounter {
 
     public static void main(String[] args){
         DayCounter myYear = new DayCounter();
-        myYear.getDay("September", 13, 2020);
+        myYear.getDay("September", 13, 1990);
         System.out.println("From class\nStart day = " + DayCounter.START_DAY);
         System.out.println("From instance myYear\nStart day = " + myYear.START_DAY);
         DayCounter testYear = new DayCounter();
