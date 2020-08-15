@@ -19,7 +19,6 @@ public class TextAreaExample extends JFrame {
     }
 
     public static void main(String[] args){
-        System.out.println("Hello Area");
         TextAreaExample textArea = new TextAreaExample();
     }
 
