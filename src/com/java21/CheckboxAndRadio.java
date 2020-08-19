@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class CheckboxAndRadio extends JFrame {
     JPanel pane = new JPanel();
 
-    public CheckboxAndRadio(String[] buttons){
+    public CheckboxAndRadio(String[] buttons, String[] radioButtons){
         super("Checkbox and Radio buttons example");
         setSize(300, 300);
         ArrayList<JCheckBox> components = addCheckBoxes(buttons);
@@ -36,7 +36,8 @@ public class CheckboxAndRadio extends JFrame {
 
 
     public static void main(String[] args){
-        String[] buttons = { "Orange", "Blue", "Black"};
-        CheckboxAndRadio panel = new CheckboxAndRadio(buttons);
+        String[] checkButtons = { "Orange", "Blue", "Black", "Blue"};
+        String[] radioButtons = { "Dell", "Lenovo Thinkpad", "Lenovo Yoga"};
+        CheckboxAndRadio panel = new CheckboxAndRadio(checkButtons, radioButtons);
     }
 }
