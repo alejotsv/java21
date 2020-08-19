@@ -13,6 +13,7 @@ public class CheckboxAndRadio extends JFrame {
         for ( JCheckBox component : components ){
             pane.add(component);
         }
+        ButtonGroup radio = addRadioButtons(radioButtons);
         add(pane);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
@@ -41,9 +42,11 @@ public class CheckboxAndRadio extends JFrame {
             if (index == 0){
                 JRadioButton temp = new JRadioButton(button, true);
                 radio.add(temp);
+                pane.add(temp);
             } else {
                 JRadioButton temp = new JRadioButton(button, false);
                 radio.add(temp);
+                pane.add(temp);
             }
             index++;
         }
