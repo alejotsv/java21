@@ -9,10 +9,14 @@ public class CheckboxAndRadio extends JFrame {
     public CheckboxAndRadio(String[] buttons, String[] radioButtons){
         super("Checkbox and Radio buttons example");
         setSize(300, 300);
+        JLabel checkboxes = new JLabel("Pick a color:");
+        pane.add(checkboxes);
         ArrayList<JCheckBox> components = addCheckBoxes(buttons);
         for ( JCheckBox component : components ){
             pane.add(component);
         }
+        JLabel radioLabel = new JLabel("Pick a laptop:");
+        pane.add(radioLabel);
         ButtonGroup radio = addRadioButtons(radioButtons);
         add(pane);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -55,7 +59,7 @@ public class CheckboxAndRadio extends JFrame {
 
 
     public static void main(String[] args){
-        String[] checkButtons = { "Orange", "Blue", "Black", "Blue"};
+        String[] checkButtons = { "Orange", "Blue", "Black"};
         String[] radioButtons = { "Dell", "Lenovo Thinkpad", "Lenovo Yoga"};
         CheckboxAndRadio panel = new CheckboxAndRadio(checkButtons, radioButtons);
     }
