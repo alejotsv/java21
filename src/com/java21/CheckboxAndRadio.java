@@ -34,6 +34,22 @@ public class CheckboxAndRadio extends JFrame {
         return components;
     }
 
+    public ButtonGroup addRadioButtons(String[] radioButtons){
+        ButtonGroup radio = new ButtonGroup();
+        int index = 0;
+        for ( String button : radioButtons ){
+            if (index == 0){
+                JRadioButton temp = new JRadioButton(button, true);
+                radio.add(temp);
+            } else {
+                JRadioButton temp = new JRadioButton(button, false);
+                radio.add(temp);
+            }
+            index++;
+        }
+        return radio;
+    }
+
 
     public static void main(String[] args){
         String[] checkButtons = { "Orange", "Blue", "Black", "Blue"};
