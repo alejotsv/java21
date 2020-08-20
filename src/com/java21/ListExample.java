@@ -5,7 +5,7 @@ import javax.swing.*;
 public class ListExample extends JFrame {
     JPanel pane = new JPanel();
 
-    public ListExample(){
+    public ListExample(String[] arr){
         super("RSS Subscriptions");
         setSize(300, 700);
 
@@ -14,6 +14,7 @@ public class ListExample extends JFrame {
     }
 
     public static void main(String[] args) {
-        ListExample list = new ListExample();
+        String[] elements = { "Ideoplex", "Inessential", "Intertwingly", "Now This", "Rasterweb", "RC3", "Whole Lotta Nothing", "Workbench" };
+        ListExample list = new ListExample(elements);
     }
 }
