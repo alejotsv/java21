@@ -8,7 +8,14 @@ public class ComboBoxExample extends JFrame {
     public ComboBoxExample(String[] options){
         super("Color selection");
         setSize(500, 500);
+        JComboBox colorSelection = new JComboBox(options);
+        colorSelection.setSelectedIndex(2);
+        JLabel label = new JLabel("Select a color");
+        pane.add(label);
+        pane.add(colorSelection);
+        add(pane);
         setVisible(true);
+        pack();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
