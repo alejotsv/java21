@@ -1,7 +1,14 @@
 package com.java21;
 
-public class InputDialogExample {
+import javax.swing.*;
+
+public class InputDialogExample extends JFrame {
+
+    String response = JOptionPane.showInputDialog(null, "Enter your name",
+            "Name box", JOptionPane.QUESTION_MESSAGE);
+
     public static void main(String[] arr){
-        System.out.println("This is a dialog example");
+        InputDialogExample inputExample = new InputDialogExample();
+        System.out.println("Your name is: " + inputExample.response);
     }
 }
