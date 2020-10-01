@@ -13,6 +13,8 @@ public class CompleteDialog extends JFrame {
         super("This is my box");
         setSize(500,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+//        TODO: create ArrayList of TextFields based on user input
         createLabels(defaultLabels);
 
         add(pane);
@@ -24,9 +26,8 @@ public class CompleteDialog extends JFrame {
         int i = 0;
         for( String labelName : labelNames ){
             JLabel temp = new JLabel(labelName, SwingConstants.RIGHT);
-            System.out.println(labelName);
+//            TODO: replace hardcoded options with user input
             JTextField tempText = new JTextField(this.responses[i], 20);
-            System.out.println(this.responses[i]);
             this.pane.add(temp);
             this.pane.add(tempText);
             i++;
