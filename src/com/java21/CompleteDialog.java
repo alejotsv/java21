@@ -15,6 +15,7 @@ public class CompleteDialog extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 //        TODO: create ArrayList of TextFields based on user input
+        getResponse();
         createLabels(defaultLabels);
 
         add(pane);
@@ -32,6 +33,22 @@ public class CompleteDialog extends JFrame {
             this.pane.add(tempText);
             i++;
         }
+    }
+
+    public void getResponse() {
+        System.out.println("Getting repsonses");
+        this.responses[0] = JOptionPane.showInputDialog(null,
+                "Enter your name: ",
+                "Name",
+                JOptionPane.QUESTION_MESSAGE);
+        this.responses[1] = JOptionPane.showInputDialog(null,
+                "Enter your site URL: ",
+                "URL",
+                JOptionPane.QUESTION_MESSAGE);
+        this.responses[2] = JOptionPane.showInputDialog(null,
+                "Enter your site type: ",
+                "Type",
+                JOptionPane.QUESTION_MESSAGE);
     }
 
     public void addLabels(ArrayList<JLabel> labels){
