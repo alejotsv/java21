@@ -10,6 +10,12 @@ public class ScrollPaneExample extends JFrame {
     public ScrollPaneExample(){
         super("This is the scroll example");
         setSize(this.dim);
+        JTextArea textArea = new JTextArea(7, 30);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+
+        pane.add(scrollPane);
+        add(pane);
+
 
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
