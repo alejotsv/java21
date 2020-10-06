@@ -8,7 +8,11 @@ public class SliderExample extends JFrame {
         super("This new slider");
         setSize(450,450);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        JSlider slider = new JSlider(0, 50, 49);
+        JSlider slider = new JSlider(0, 100, 10);
+        slider.setMajorTickSpacing(10);
+        slider.setMinorTickSpacing(5);
+//        slider.setPaintLabels(true);
+        slider.setPaintTicks(true);
         pane.add(slider);
         add(pane);
         setVisible(true);
