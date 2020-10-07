@@ -12,8 +12,17 @@ public class ToolBarExample extends JFrame {
 
         ImageIcon downloadIcon = new ImageIcon(this.path + "save.png");
         JButton downloadButton = new JButton("Download", downloadIcon);
+        ImageIcon uploadIcon = new ImageIcon(this.path + "upload.png");
+        JButton uploadButton = new JButton("Upload", uploadIcon);
 
-        pane.add(downloadButton);
+        JToolBar toolBar = new JToolBar();
+
+        toolBar.add(downloadButton);
+        toolBar.add(uploadButton);
+
+        pane.add(toolBar);
+
+
         add(pane);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
