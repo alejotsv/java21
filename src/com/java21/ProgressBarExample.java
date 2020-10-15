@@ -4,11 +4,20 @@ import javax.swing.*;
 
 public class ProgressBarExample extends JFrame {
     JPanel pane = new JPanel();
+    JProgressBar pBar = new JProgressBar(1,100);
 
     public ProgressBarExample(){
         super("Progress Bar");
-        System.out.println("This is a progress bar");
+        setSize(250, 60);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        pane.add(this.pBar);
+
+        add(pane);
+
+        setVisible(true);
+
         countNumbers(45);
+
 
     }
 
