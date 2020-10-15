@@ -7,8 +7,10 @@ public class ToolBarExample extends JFrame {
     String path = "/home/alejotsv/code/java/java21/global21/src/com/java21/img/";
 
     public ToolBarExample(){
-        super("This is a ToolBar");
-        setSize(400,400);
+        super("FeedBar");
+        setSize(1200,400);
+
+        JTextArea textArea = new JTextArea(21,102);
 
         ImageIcon downloadIcon = new ImageIcon(this.path + "save.png");
         JButton downloadButton = new JButton("Download", downloadIcon);
@@ -20,10 +22,12 @@ public class ToolBarExample extends JFrame {
         toolBar.add(downloadButton);
         toolBar.add(uploadButton);
 
+        pane.add(textArea);
         pane.add(toolBar);
 
 
         add(pane);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
 
