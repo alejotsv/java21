@@ -16,6 +16,11 @@ public class ProgressBarExample extends JFrame {
         int i = 0;
         while(i <= num){
             System.out.println(i);
+            try {
+                Thread.sleep(4000);
+            } catch (InterruptedException e){
+                System.out.println(e);
+            }
             i++;
         }
     }
