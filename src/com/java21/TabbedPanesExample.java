@@ -4,14 +4,14 @@ import javax.swing.*;
 
 public class TabbedPanesExample extends JFrame {
 
-    String[] tabs = { "Real Madrid", "River Plate", "AC Milan"};
+    String[] tabs = { "Real Madrid", "River Plate", "AC Milan", "Liverpool", "Manchester United", "Caracas FC"};
 
     public TabbedPanesExample(){
         super("Tabbed Panes");
         setSize(500, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        JTabbedPane tPane = new JTabbedPane();
+        JTabbedPane tPane = new JTabbedPane(JTabbedPane.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);
 
         createTabs(this.tabs, tPane);
 
