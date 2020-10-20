@@ -17,6 +17,7 @@ public class MenuExample extends JFrame {
         for ( String item : this.items ){
             JMenuItem temp = createMenuItem(item);
             menu.add(temp);
+            menu.addSeparator();
         }
 
         menuBar.add(menu);
