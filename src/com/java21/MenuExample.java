@@ -22,7 +22,7 @@ public class MenuExample extends JFrame {
 
         menuBar.add(menu);
 
-        pane.add(menuBar);
+        setJMenuBar(menuBar);
 
         add(pane);
 
