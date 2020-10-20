@@ -12,9 +12,18 @@ public class MenuExample extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("Favorite Team");
+
         for ( String item : this.items ){
-            createMenuItem(item);
+            JMenuItem temp = createMenuItem(item);
+            menu.add(temp);
         }
+
+        menuBar.add(menu);
+
+        pane.add(menuBar);
+
+        add(pane);
 
         setVisible(true);
     }
