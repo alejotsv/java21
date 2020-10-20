@@ -1,7 +1,20 @@
 package com.java21;
 
-public class TabbedPanesExample {
+import javax.swing.*;
+
+public class TabbedPanesExample extends JFrame {
+    JPanel pane = new JPanel();
+
+    public TabbedPanesExample(){
+        super("Tabbed Panes");
+        setSize(500, 300);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        setVisible(true);
+    }
+
+
     public static void main(String[] args){
-        System.out.println("A tabbed pane example");
+        TabbedPanesExample tabs = new TabbedPanesExample();
     }
 }
